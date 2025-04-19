@@ -1,0 +1,435 @@
+:root {
+  scroll-behavior: smooth;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #1f2937; /* Dark background */
+}
+
+.navbar-brand img {
+  width: 94px;
+}
+
+.navbar-nav .nav-item .nav-link {
+  color: #ecf0f1 !important;
+  padding: 10px 15px;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: #3498db !important;
+}
+
+
+
+
+
+/* Footer Styling */
+.footer {
+  background-color: #1f2937;
+  color: #ecf0f1;
+}
+
+.footer h5 {
+  color: #3498db;
+}
+
+.footer a {
+  color: #ecf0f1;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.social-icon {
+  margin: 0 10px;
+  color: #ecf0f1;
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: #3498db;
+}
+
+/* Input Group for Newsletter */
+.input-group input {
+  border-radius: 20px 0 0 20px;
+}
+
+.input-group button {
+  border-radius: 0 20px 20px 0;
+}
+
+/* Mobile Responsive Footer */
+@media (max-width: 768px) {
+  .footer .row {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .footer .col-md-4 {
+      margin-bottom: 20px;
+  }
+}
+/* Enhanced Navbar Toggler Button */
+.navbar-toggler.custom-toggler {
+  border: none;
+  background-color: transparent; /* Transparent background */
+  padding: 10px 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-color: #3498db !important;
+}
+
+/* Toggler Icon Style */
+.navbar-toggler-icon {
+  background-color: #3498db; /* White color for the icon */
+  width: 30px;
+  height: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Toggler Button Hover Effect */
+.navbar-toggler.custom-toggler:hover {
+  background-color: rgba(52, 152, 219, 0.1); /* Soft blue background on hover */
+  border-radius: 50%; /* Rounded corners for smooth hover */
+}
+
+/* Toggler Animation (transform into "X" on open) */
+.navbar-toggler.collapsed .navbar-toggler-icon {
+  transform: rotate(0); /* When collapsed, keep it horizontal */
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+  transform: rotate(45deg); /* When expanded, rotate to "X" */
+  position: relative;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  transform: rotate(90deg); /* Perpendicular line to form "X" */
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  transform: rotate(90deg); /* Perpendicular line to form "X" */
+  transition: all 0.3s ease;
+}
+
+
+.navbar-toggler-icon {
+  background-color: #3498db; /* Blue toggler icon */
+}
+
+
+/* Bootstrap's default navbar-toggler class might be overriding, so use more specific targeting */
+.navbar-toggler {
+  border: 2px solid #3498db !important; /* Explicitly set the border to ensure it's applied */
+}
+/* Existing custom styles in style.css */
+
+/* Smooth scrolling for the entire container */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Apply initial visibility hidden for fade-in effect */
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+/* Show elements when they come into view */
+.fade-in.visible {
+  opacity: 1;
+}
+
+/* Scroll effect: Make sections slide up */
+.slide-up {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+}
+
+/* Show when element is visible in view */
+.slide-up.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  display: none; /* Initially hidden */
+  z-index: 1000; /* Ensures it stays above other elements */
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent */
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+#backToTop:hover {
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+}
+
+  /* Hero Section Animation */
+  .hero-section .overlay-text h1 {
+      animation: fadeInDown 1.5s ease-in-out;
+  }
+
+  .hero-section .overlay-text p {
+      animation: fadeInUp 1.5s ease-in-out;
+  }
+
+  @keyframes fadeInDown {
+      0% {
+          opacity: 0;
+          transform: translateY(-20px);
+      }
+      100% {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+  @keyframes fadeInUp {
+      0% {
+          opacity: 0;
+          transform: translateY(20px);
+      }
+      100% {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+  .loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid #fff;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+
+/* Progress Bar */
+.progress-bar {
+  height: 10px;
+  background: #3498db;
+  width: 0%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+.progress-bar {
+  top: auto;
+  bottom: 0;
+}
+
+.dropdown-menu {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  width: 250px;
+  margin-top: 15px;
+  padding: 0;
+  border: 1px solid #e0e0e0; /* Add a border for better visibility */
+  border-radius: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  display: block;
+}
+
+.dropdown-toggle::after {
+  display: none; /* Hide the default Bootstrap caret */
+}
+
+/* Show dropdown on hover and focus */
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+}
+
+.dropdown-item {
+  padding: 0.8rem 1.5rem;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #333; /* Ensure text color is readable */
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background: #3498db;
+  color: #fff;
+}
+
+ul.dropdown-menu li {
+  padding-left: 0 !important; /* Remove unnecessary padding */
+}
+            /* Ensure dropdown menu is full width on mobile */
+@media (max-width: 992px) {
+  .navbar-nav .dropdown-menu {
+      position: static; /* Make dropdown menu flow naturally in the document */
+      float: none; /* Remove float */
+      width: 100%; /* Full width */
+      margin-top: 0.5rem; /* Add some spacing */
+      border: none; /* Remove border */
+      box-shadow: none; /* Remove shadow */
+      background-color: transparent; /* Transparent background */
+      
+  }
+
+  .navbar-nav .dropdown-item {
+      padding: 0.5rem 1rem; /* Add padding for easier tapping */
+      font-size: 1rem; /* Adjust font size */
+      color: #fff; /* Text color */
+      background-color: rgba(255, 255, 255, 0.1); /* Slight background for visibility */
+      border-radius: 0.25rem; /* Rounded corners */
+  }
+
+  .navbar-nav .dropdown-item:hover {
+      background-color: rgba(255, 255, 255, 0.2); /* Hover effect */
+  }
+}
+@media (max-width: 992px) {
+.dropdown-menu {
+  display: none;
+  width: 100%;
+  text-align: center;
+}
+}
+
+
+.navbar-brand img {
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    color: #ffffff !important; /* White text for links */
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #3498db !important; /* Blue text on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover */
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    background-color: #2c3e50; /* Dark background for dropdown */
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-item {
+    color: #ffffff !important; /* White text for dropdown items */
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dropdown-item:hover {
+    background-color: #3498db !important; /* Blue background on hover */
+    color: #ffffff !important;
+}
+
+/* Login Button Styling */
+#loginButton {
+    background-color: #3498db; /* Blue background */
+    border: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#loginButton:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Mobile Login Button Styling */
+#loginButtonMobile {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    background-color: #3498db; /* Blue background */
+    border: none;
+    transition: all 0.3s ease;
+}
+
+#loginButtonMobile:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+#loginButtonMobile i {
+    color: white; /* Ensure icon is white */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        margin-top: 1rem;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 0.5rem 0;
+    }
+
+    .dropdown-menu {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .dropdown-item {
+        padding: 0.5rem 1.5rem;
+    }
+}

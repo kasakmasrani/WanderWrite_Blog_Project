@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons (for icons) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/accordian.css">
+    <link rel="stylesheet" href="css/hero_section.css">
+    
+    <style>
+    
+    </style>
+    <!-- Scripts (using defer to prevent blocking page rendering) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>Blog</title>
+    <script src="js/spinner.js" defer></script>
+    
+</head>
+
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Sunflower:300,500,700');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            line-height: 1.5;
+        }
+        
+        /* body {
+            
+            
+        } */
+        
+        .custom-accordion {
+            background: #8A6552;
+            color: #FFFFFF;
+            font-family: 'Sunflower', sans-serif;
+            padding-bottom: 2rem;
+        
+            > .item {
+                padding: 1rem 2rem;
+                margin: 0 auto;
+                max-width: 30rem;
+        
+                &:last-of-type {
+                    background: #462521;
+                    text-align: center;
+                    border-radius: .5rem;
+        
+                    > .icon {
+                        color: #FFFFFF;
+                    }
+                }
+        
+                &:nth-of-type(6) {
+                    padding-bottom: 2rem;
+                }
+            }
+        
+            > .item > .icon {
+                color: #462521;
+                font-size: 2rem;
+            }
+        
+            > .item > .title {
+                font-size: 1.5rem;
+            }
+        
+            /* > .item > .content {
+                
+            } */
+        }
+        @media (max-width: 768px) {
+            /* Accordion */
+        .custom-accordion {
+            background: #8A6552;
+            padding: 2rem 0;
+        }
+        
+        .custom-accordion .item {
+            background: #462521;
+            margin: 1rem auto;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            max-width: 800px;
+        }
+        
+        .custom-accordion .item .icon {
+            font-size: 2rem;
+            color: #CA2E55;
+        }
+        
+        .custom-accordion .item .title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        
+        .custom-accordion .item .content {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+            .custom-accordion {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+                padding: 2rem;
+            }
+        
+            .custom-accordion .item {
+                flex: 1 1 calc(33.333% - 2rem);
+                max-width: calc(33.333% - 2rem); 
+                margin: 0;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+        
+            .custom-accordion .item:hover {
+                transform: scale(1.05);
+                box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            }
+        
+            .custom-accordion .item .content {
+                display: none;
+            }
+        
+            .custom-accordion .item:hover .content {
+                display: block;
+            }
+        }
+        @media screen and (min-width: 769px) and (min-height: 270px) {
+         
+        
+            .custom-accordion {
+                display: table;
+                width: 100%;
+                max-width: 1200px;
+                margin: 0 auto;
+                height: 100vh;
+                max-height: 1000px;
+                overflow: hidden;
+                padding-bottom: 0;
+        
+                > .item {
+                    display: table-cell;
+                    position: relative;
+                    height: 100%;
+                    padding: 2rem 1rem;
+                    text-align: center;
+                    transform-origin: 0 50%;
+                    transition: all .3s cubic-bezier(.8,.16,.42,.89);
+        
+                    &:hover:not(:last-of-type) {
+                        transform: scaleX(2) translateX(-1px);
+                        box-shadow: 0 0 3rem #301916;
+                        background: #8A6552;
+                        border-color: transparent;
+                    }
+        
+                    &:hover + .item {
+                        opacity: .1;
+                    }
+        
+                    &:hover + .item:last-of-type {
+                        opacity: .1;
+                        background: #8A6552;
+                    }
+        
+                    &:not(:last-of-type) {
+                        border-right: 1px solid #462521;
+                    }
+        
+                    &:last-of-type {
+                        background: #462521;
+                        width: 25%;
+                        border-radius: 0;
+                    }
+                    
+                    &:last-of-type .heart-icon {
+                        font-size: 6rem;
+                    }
+        
+                    &:hover:last-of-type .heart-icon {
+                        transform: scale(2);
+                    }
+        
+                    &:last-of-type > .title {
+                        transform: rotate(0) translateX(-50%) translateY(-2.5rem);
+                        padding: 0;
+                        text-align: center;
+                        
+                    }
+        
+        
+                    &:last-of-type > .content {
+                        opacity: 1;
+                        transform: translateX(-50%) translateY(-50%);
+                    }
+        
+                    &:hover:not(:last-of-type) > .icon {
+                        transform: scaleX(.5);
+                    }
+        
+                    &:hover:not(:last-of-type) > .title {
+                        transform: scaleX(.5) translateX(-50%);
+                        background: #CA2E55;
+                        text-align: center;
+                        
+                        
+                        padding: 0;
+                        
+                        > .text {
+                            transform: translateX(-50%);
+                            left: 50%;
+                        }
+                    }
+        
+                    &:hover:not(:last-of-type) > .content {
+                        opacity: 1;
+                    }
+                }
+        
+                > .item > .icon {
+                    font-weight: 700;
+                    font-size: 2rem;
+                    transition: all .3s cubic-bezier(.8,.16,.42,.89);
+                    color: #FFFFFF;
+                }
+        
+                > .item > .title {
+                    position: absolute;
+                    bottom: 0;
+                    left: 50%;
+                    height: 1.5rem;
+                    width: 200%;
+                    text-align: left;
+                    transform-origin: 0 50%;
+                    transform: rotate(-90deg);
+                    transition: all .3s cubic-bezier(.8,.16,.42,.89);
+                    font-size: 1.2rem;
+                }
+                
+                > .item > .title > .text {
+                    position: absolute;
+                    left: 2rem;
+                    bottom: 0;
+                    white-space: nowrap;
+                    transition: all .3s cubic-bezier(.8,.16,.42,.89);
+                }
+        
+                > .item > .content {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 200%;
+                    height: auto;
+                    transform: translateX(-50%) translateY(-50%) scaleX(.5);
+                    transition: all .3s cubic-bezier(.8,.16,.42,.89);
+                    opacity: 0;
+                    padding: 1rem;
+                    pointer-events: none;
+                }
+        
+            }
+        
+        }
+        
+        .heart-icon {
+            color: #CA2E55;
+            font-size: 3rem;
+            transition: all .3s cubic-bezier(.8,.16,.42,.89);
+        }
+        
+            /* Title Overflow Handling */
+    .item .title .text {
+        font-size: 18px;
+        font-weight: bold;
+        display: block;
+        overflow: hidden; 
+        white-space: nowrap; 
+        text-overflow: ellipsis;
+        width: 100%; 
+        max-width: 100%; 
+    }
+    /* Media Queries for Responsiveness */
+    @media (max-width: 768px) {
+        .item .title .text {
+            font-size: 16px; 
+            white-space: normal;
+            text-overflow: unset; 
+        }
+    }
+    </style>
+ 
+
+ </style>
+    <!-- Loading Animation -->
+    <div id="loading" class="loading-overlay">
+        <div class="spinner"></div>
+    </div>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top shadow w-full shadow-md p-3 flex justify-between items-center z-50">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="1_index.html">
+                <img src="img/logo.png" alt="WanderWrite Logo" width="90" class="me-2">
+                <span class="font-weight-bold text-white text-xl d-none d-md-block">WanderWrite</span>
+            </a>
+    
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="1_index.html">Home</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="2_blog.html" id="navbarDropdown" role="button" 
+                            data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                            Blog
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="2_blog.html">Blog Post</a></li>
+                            <li><a class="dropdown-item" href="3_store.html">Store</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="4_contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="5_about.html">About</a></li>
+                </ul>
+    
+                <!-- Login/Logout Button -->
+                <form action="/10_login.html" method="get" class="d-flex ms-lg-3">
+                    <button class="btn btn-primary px-4 py-2 rounded-lg shadow-sm transition-all duration-300 hover:bg-blue-600 hover:shadow-md d-none d-lg-inline-flex" 
+                        id="loginButton">
+                        Login
+                    </button>
+                    <button class="btn btn-primary rounded-circle p-2 d-flex align-items-center justify-content-center d-inline-flex d-lg-none" 
+                        id="loginButtonMobile">
+                        <i class="bi bi-person-fill text-white" style="font-size: 1.4rem;"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+   
+    
+    
+    <!-- header -->
+    <div class="hero-section"> 
+        <img src="img/blo2.avif" alt="Background Image" class="bg-image">
+        <div class="overlay-text">
+            <h1>Step into the World of Ideas</h1>
+            <p>Read articles, discover trends, and fuel your creativity. Our blog is here to inspire and inform!</p>
+        </div>
+    </div>
+    
+    <!-- Blogs -->
+    <div style="background: linear-gradient(135deg, #8A6552, #462521);">
+        <div id="accordionContainer" class="custom-accordion container-fluid">
+        <!-- Blog posts will be inserted here dynamically -->
+        </div>
+    </div>
+    
+    <!-- "+" Button to Add Blog -->
+    <button id="addBlogBtn" class="btn btn-primary btn-lg rounded-circle shadow-lg position-fixed bottom-0 end-0 m-3">
+        <span class="fw-bold" style="font-size: 24px;">+</span>
+    </button>
+
+    
+   <style>
+/* General Modal Styling */
+.modal-content {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal Header */
+.modal-header {
+    
+    color: white;
+    border-bottom: none;
+    padding: 20px;
+}
+
+.modal-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.btn-close-white {
+    filter: invert(1);
+}
+
+/* Modal Body */
+.modal-body {
+    background-color: #f8f9fa;
+    padding: 24px;
+}
+
+/* Form Labels */
+.form-label {
+    font-weight: 600;
+    color: #343a40;
+}
+
+/* Input Fields */
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    transition: all 0.3s ease-in-out;
+}
+
+.form-control:focus {
+    /* border-color: #6a11cb; */
+    box-shadow: 0 0 5px rgba(106, 17, 203, 0.3);
+}
+
+/* Textarea */
+textarea.form-control {
+    resize: none;
+}
+
+/* Image Preview */
+#imagePreview img {
+    max-height: 150px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Select Dropdown */
+select.form-control {
+    cursor: pointer;
+}
+
+/* Button Styling */
+.btn-primary {
+    /* background: linear-gradient(135deg, #2575fc, #6a11cb); */
+    border: none;
+    font-weight: bold;
+    padding: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    /* background: linear-gradient(135deg, #6a11cb, #2575fc); */
+    box-shadow: 0 4px 12px rgba(37, 117, 252, 0.3);
+}
+
+/* Spinner Visibility */
+#submitSpinner {
+    display: none;
+}
+
+/* Message Box */
+#formMessage {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #198754;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .modal-dialog {
+        max-width: 95%;
+    }
+}
+    </style>
+
+    <div class="modal fade" id="addBlogModal" tabindex="-1" aria-labelledby="addBlogModalLabel" aria-hidden="true" data-bs-backdrop="static">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content shadow-lg border-0 rounded-3">
+                    <div class="modal-header bg-dark text-white">
+                        <h5 class="modal-title fw-bold" id="addBlogModalLabel">Create a New Blog</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-4">
+                        <form id="addBlogForm">
+                            <div class="mb-3">
+                                <label for="blogTitle" class="form-label fw-semibold">Title <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="blogTitle" placeholder="Enter blog title" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="blogExcerpt" class="form-label fw-semibold">Excerpt</label>
+                                <textarea class="form-control" id="blogExcerpt" rows="2" placeholder="Short summary..."></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <label for="blogAuthor" class="form-label fw-semibold">Author <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="blogAuthor" placeholder="Your name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="blogImage" class="form-label fw-semibold">Image URL</label>
+                                <input type="url" class="form-control" id="blogImage" placeholder="Image URL (optional)">
+                                <small class="text-muted">Paste a valid image URL to display a preview.</small>
+                                <div id="imagePreview" class="mt-2 text-center" style="display: none;">
+                                    <img src="" alt="Image Preview" class="img-fluid rounded" style="max-height: 150px;">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="blogCategory" class="form-label fw-semibold">Category</label>
+                                <input type="text" class="form-control" id="blogCategory" placeholder="Enter category">
+                            </div>
+                            <div class="mb-3">
+                                <label for="blogTags" class="form-label fw-semibold">Tags</label>
+                                <input type="text" class="form-control" id="blogTags" placeholder="Comma-separated tags">
+                            </div>
+                            <div class="mb-3">
+                                <label for="blogStatus" class="form-label fw-semibold">Status <span class="text-danger">*</span></label>
+                                <select class="form-control" id="blogStatus" required>
+                                    <option value="draft">Draft</option>
+                                    <option value="published">Published</option>
+                                    <option value="archived">Archived</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="blogContent" class="form-label fw-semibold">Content <span class="text-danger">*</span></label>
+                                <textarea class="form-control" id="blogContent" rows="6" placeholder="Write your thoughts here..." required></textarea>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button type="submit" class="btn btn-primary fw-bold" id="submitBtn">
+                                    <span id="submitText">Publish Blog</span>
+                                    <span id="submitSpinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true" style="display: none;"></span>
+                                </button>
+                            </div>
+                            <div id="formMessage" class="mt-3 text-center"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+
+    <!-- Footer -->
+    <footer class="footer text-center text-light py-5">
+        <div class="container">
+            <div class="row">
+                <!-- About Us -->
+                <div class="col-md-4 mb-4">
+                    <h5>About WanderWrite</h5>
+                    <p class="text-white">
+                        WanderWrite is your go-to platform for creativity, insights, and inspiration. We bring you the best in travel stories, lifestyle tips, and creative writing to fuel your imagination and wanderlust.
+                    </p>
+                    <a href="/about.html" class="btn btn-outline-light btn-sm">Learn More</a>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-4 mb-4">
+                    <h5>Quick Links</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li><a href="/" class="text-light text-decoration-none">Home</a></li>
+                                <li><a href="/2_blog.html" class="text-light text-decoration-none">Blog</a></li>
+                                <li><a href="/3_store.html" class="text-light text-decoration-none">Store</a></li>
+                                <li><a href="/4_contact.html" class="text-light text-decoration-none">About</a></li>
+                                <li><a href="/5_about.html" class="text-light text-decoration-none">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul class="list-unstyled">
+                                <li><a href="/3_store.html" class="text-light text-decoration-none">FAQs</a></li>
+                                <li><a href="/5_about.html" class="text-light text-decoration-none">Terms & Conditions</a></li>
+                                <li><a href="/5_about.html" class="text-light text-decoration-none">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                
+                <!-- Contact Information -->
+                <div class="col-md-4 mb-4">
+                    <h5>Contact Us</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt me-2"></i>123 Wander Street, Creative City, Earth</li>
+                        <li><i class="fas fa-phone me-2"></i>+1 (123) 456-7890</li>
+                        <li><i class="fas fa-envelope me-2"></i>info@wanderwrite.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <!-- Social Media Links -->
+                <div class="col-md-6 mb-4">
+                    <h5>Follow Us</h5>
+                    <a href="https://twitter.com/yourusername" class="social-icon me-3" target="_blank">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://instagram.com/yourusername" class="social-icon me-3" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/yourusername" class="social-icon me-3" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://facebook.com/yourusername" class="social-icon me-3" target="_blank">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                </div>
+
+                <!-- Newsletter Subscription -->
+                <div class="col-md-6 mb-4">
+                    <h5>Subscribe to Our Newsletter</h5>
+                    <form action="/subscribe" method="post">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email" required>
+                            <button type="submit" class="btn btn-outline-light">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            
+            
+
+            <!-- Map Integration -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <h5>Find Us</h5>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8354345093747!2d144.9537353153166!3d-37.816279742021665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d6a32f4c0bb!2sCreative%20City!5e0!3m2!1sen!2sus!4v1622549400000!5m2!1sen!2sus"
+                            class="embed-responsive-item"
+                            style="border:0; width: 100%; height: 200px;"
+                            allowfullscreen=""
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="row mt-4">
+                <div class="col-12">
+                    <p class="mb-0">&copy; 2025 WanderWrite. All Rights Reserved.</p>
+                    <p class="text-muted">Designed with <i class="fas fa-heart text-danger"></i> by WanderWrite Team</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Back to Top Button -->
+    <a href="#" id="backToTop" class="btn btn-primary btn-sm position-fixed bottom-3 end-3 shadow" style="display: none;" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+   
+    <script>
+        // Ensure the DOM is loaded and then initialize the modal toggle
+        document.getElementById('addBlogBtn').addEventListener('click', function () {
+            const myModal = new bootstrap.Modal(document.getElementById('addBlogModal'));
+            myModal.show();
+        });
+    </script>
+    <script>
+        // Fetch and display the blog posts
+        fetch("http://localhost:3000/api/posts")
+            .then(response => response.json())
+            .then(data => {
+                const accordionContainer = document.getElementById("accordionContainer");
+    
+                // Clear existing content
+                accordionContainer.innerHTML = "";
+    
+                if (data.length === 0) {
+                    accordionContainer.innerHTML = "<p>No posts available.</p>";
+                } else {
+                    data.forEach((post, index) => {
+                        // Use the `webpage` field from the database to determine the URL
+                        const postPage = post.webpage || `11_404.html`; // Fallback to default if `webpage` is not provided
+    
+                        const item = document.createElement("div");
+                        item.classList.add("item");
+                        item.innerHTML = `
+                            <div class="icon">${index + 1}</div>
+                            <div class="title">
+                                <a href="${postPage}?id=${post.id}" class="text-decoration-none text-white">
+                                    <div class="text">${post.title}</div>
+                                </a>
+                            </div>
+                            <div class="content">
+                                <p><strong>Author:</strong> ${post.author}</p>
+                                ${post.content}
+                            </div>
+                        `;
+    
+                        // Make entire item clickable and navigate to the dynamically assigned blog post page
+                        item.addEventListener("click", () => {
+                            window.location.href = `${postPage}?id=${post.id}`;
+                        });
+    
+                        accordionContainer.appendChild(item);
+                    });
+    
+                    // Append last item with heart icon
+                    const lastItem = document.createElement("div");
+                    lastItem.classList.add("item");
+                    lastItem.innerHTML = `
+                        <div class="icon"></div>
+                        <div class="title"></div>
+                        <div class="content">
+                            <span class="heart-icon">&hearts;</span>
+                        </div>
+                    `;
+                    accordionContainer.appendChild(lastItem);
+                }
+            })
+            .catch(error => {
+                console.error("Error fetching posts:", error);
+                document.getElementById("accordionContainer").innerHTML =
+                    "<p>Failed to load posts. Please try again later.</p>";
+            });
+    
+        // Handle form submission for adding a new blog
+        document.getElementById("addBlogForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+    
+            const title = document.getElementById("blogTitle").value;
+            const author = document.getElementById("blogAuthor").value;
+            const content = document.getElementById("blogContent").value;
+            const webpage = `6_blogpost.html`;
+    
+            fetch("http://localhost:3000/api/posts", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+                body: `title=${title}&content=${content}&author=${author}&webpage=${webpage}`,
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.message) {
+                        alert("Blog added successfully!");
+                        location.reload();
+                    } else {
+                        alert("Failed to add blog: " + data.error);
+                    }
+                })
+                .catch(error => {
+                    console.error("Error submitting blog:", error);
+                    alert("Failed to add blog. Please try again later.");
+                });
+        });
+    </script>
+   
+   
+    <script>
+    
+        document.getElementById('addBlogForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+    
+            // Clear previous validation messages
+            document.querySelectorAll('.invalid-feedback').forEach(el => el.remove());
+            document.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
+    
+            let isValid = true;
+    
+            function showError(input, message) {
+                isValid = false;
+                input.classList.add('is-invalid');
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'invalid-feedback';
+                errorDiv.textContent = message;
+                input.parentNode.appendChild(errorDiv);
+            }
+    
+            // Validate required fields
+            const title = document.getElementById('blogTitle');
+            if (title.value.trim() === '') showError(title, 'Title is required.');
+    
+            const author = document.getElementById('blogAuthor');
+            if (author.value.trim() === '') showError(author, 'Author name is required.');
+    
+            const content = document.getElementById('blogContent');
+            if (content.value.trim() === '') showError(content, 'Content cannot be empty.');
+    
+            // Validate optional Image URL
+            const imageUrl = document.getElementById('blogImage');
+            if (imageUrl.value.trim() !== '' && !isValidUrl(imageUrl.value.trim())) {
+                showError(imageUrl, 'Invalid image URL.');
+            }
+    
+            // Validate tags (only comma-separated words)
+            const tags = document.getElementById('blogTags');
+            if (tags.value.trim() !== '' && !/^[a-zA-Z0-9,\s]+$/.test(tags.value.trim())) {
+                showError(tags, 'Tags must be comma-separated words.');
+            }
+    
+            // Validate category (prevent invalid characters)
+            const category = document.getElementById('blogCategory');
+            if (category.value.trim() !== '' && !/^[a-zA-Z0-9\s]+$/.test(category.value.trim())) {
+                showError(category, 'Category must contain only letters and numbers.');
+            }
+    
+            // Validate status selection
+            const status = document.getElementById('blogStatus');
+            const validStatuses = ['draft', 'published', 'archived'];
+            if (!validStatuses.includes(status.value)) {
+                showError(status, 'Invalid status selected.');
+            }
+    
+            if (!isValid) return; // Stop submission if validation fails
+    
+            // Show loading spinner
+            const submitBtn = document.getElementById('submitBtn');
+            const submitText = document.getElementById('submitText');
+            const submitSpinner = document.getElementById('submitSpinner');
+            submitText.textContent = 'Publishing...';
+            submitSpinner.style.display = 'inline-block';
+            submitBtn.disabled = true;
+    
+            // Gather form data
+            const formData = {
+                title: title.value.trim(),
+                excerpt: document.getElementById('blogExcerpt').value.trim(),
+                author: author.value.trim(),
+                content: content.value.trim(),
+                image: imageUrl.value.trim(),
+                category: category.value.trim(),
+                tags: tags.value.trim(),
+                status: status.value,
+            };
+    
+            // Send POST request
+            fetch('http://localhost:3000/api/posts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    document.getElementById('formMessage').innerHTML = `
+                        <div class="alert alert-success" role="alert">
+                            Blog published successfully! Redirecting...
+                        </div>
+                    `;
+                    setTimeout(() => {
+                        location.reload();
+                    }, 2000);
+                } else {
+                    document.getElementById('formMessage').innerHTML = `
+                        <div class="alert alert-danger" role="alert">
+                            Failed to publish blog: ${data.error || 'Unknown error'}
+                        </div>
+                    `;
+                }
+            })
+            .catch(error => {
+                console.error('Error submitting blog:', error);
+                document.getElementById('formMessage').innerHTML = `
+                    <div class="alert alert-danger" role="alert">
+                        Failed to publish blog. Please try again later.
+                    </div>
+                `;
+            })
+            .finally(() => {
+                // Reset button state
+                submitText.textContent = 'Publish Blog';
+                submitSpinner.style.display = 'none';
+                submitBtn.disabled = false;
+            });
+        });
+    
+        // URL Validation Function
+        function isValidUrl(string) {
+            try {
+                new URL(string);
+                return true;
+            } catch (_) {
+                return false;
+            }
+        }
+    </script>
+     <script>
+        // Image URL Preview
+        document.getElementById('blogImage').addEventListener('input', function () {
+            const imageUrl = this.value;
+            const imagePreview = document.getElementById('imagePreview');
+            if (imageUrl) {
+                imagePreview.style.display = 'block';
+                imagePreview.querySelector('img').src = imageUrl;
+            } else {
+                imagePreview.style.display = 'none';
+            }
+        });
+
+        // Handle form submission for adding a new blog
+        document.getElementById('addBlogForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            // Show loading spinner
+            const submitBtn = document.getElementById('submitBtn');
+            const submitText = document.getElementById('submitText');
+            const submitSpinner = document.getElementById('submitSpinner');
+            submitText.textContent = 'Publishing...';
+            submitSpinner.style.display = 'inline-block';
+            submitBtn.disabled = true;
+
+            // Gather form data
+            const formData = {
+                title: document.getElementById('blogTitle').value,
+                excerpt: document.getElementById('blogExcerpt').value,
+                author: document.getElementById('blogAuthor').value,
+                content: document.getElementById('blogContent').value,
+                image: document.getElementById('blogImage').value,
+                category: document.getElementById('blogCategory').value,
+                tags: document.getElementById('blogTags').value,
+                status: document.getElementById('blogStatus').value,
+            };
+
+            // Send POST request
+            fetch('http://localhost:3000/api/posts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.message) {
+                        // Success
+                        document.getElementById('formMessage').innerHTML = `
+                            <div class="alert alert-success" role="alert">
+                                Blog published successfully! Redirecting...
+                            </div>
+                        `;
+                        setTimeout(() => {
+                            location.reload();
+                        }, 2000);
+                    } else {
+                        // Error
+                        document.getElementById('formMessage').innerHTML = `
+                            <div class="alert alert-danger" role="alert">
+                                Failed to publish blog: ${data.error || 'Unknown error'}
+                            </div>
+                        `;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error submitting blog:', error);
+                    document.getElementById('formMessage').innerHTML = `
+                        <div class="alert alert-danger" role="alert">
+                            Failed to publish blog. Please try again later.
+                        </div>
+                    `;
+                })
+                .finally(() => {
+                    // Reset button state
+                    submitText.textContent = 'Publish Blog';
+                    submitSpinner.style.display = 'none';
+                    submitBtn.disabled = false;
+                });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const loginButton = document.getElementById("loginButton");
+    const loginButtonMobile = document.getElementById("loginButtonMobile");
+
+    function updateLoginButton() {
+        const isLoggedIn = localStorage.getItem("loggedIn") === "true";
+
+        if (isLoggedIn) {
+            // Change to Logout button
+            loginButton.textContent = "Logout";
+            loginButton.classList.replace("btn-primary", "btn-danger");
+            loginButton.setAttribute("type", "button"); // Prevent form submission
+            loginButton.onclick = logoutUser;
+
+            loginButtonMobile.innerHTML = '<i class="bi bi-box-arrow-right text-white" style="font-size: 1.4rem;"></i>';
+            loginButtonMobile.classList.replace("btn-primary", "btn-danger");
+            loginButtonMobile.setAttribute("type", "button"); // Prevent form submission
+            loginButtonMobile.onclick = logoutUser;
+        } else {
+            // Change back to Login button
+            loginButton.textContent = "Login";
+            loginButton.classList.replace("btn-danger", "btn-primary");
+            loginButton.setAttribute("type", "submit"); // Allow navigation
+            loginButton.onclick = null; // Remove logout function
+
+            loginButtonMobile.innerHTML = '<i class="bi bi-person-fill text-white" style="font-size: 1.4rem;"></i>';
+            loginButtonMobile.classList.replace("btn-danger", "btn-primary");
+            loginButtonMobile.setAttribute("type", "submit"); // Allow navigation
+            loginButtonMobile.onclick = null; // Remove logout function
+        }
+    }
+
+    function logoutUser() {
+        localStorage.removeItem("loggedIn");
+        alert("Logged out successfully!");
+        updateLoginButton();
+    }
+
+    // Update button on page load
+    updateLoginButton();
+});
+
+    </script>
+   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    const addBlogBtn = document.getElementById("addBlogBtn"); // "+" Button
+    const addBlogModalEl = document.getElementById("addBlogModal");
+    const addBlogModal = new bootstrap.Modal(addBlogModalEl); // Modal instance
+
+    addBlogBtn.addEventListener("click", function (event) {
+        const isLoggedIn = localStorage.getItem("loggedIn") === "true"; // Check login status
+
+        if (isLoggedIn) {
+            addBlogModal.show(); // Open modal if logged in
+        } else {
+            alert("You need to log in first to add a blog."); // Show login alert
+            event.stopPropagation(); // Stop the event from triggering modal
+        }
+    });
+
+    // Ensure modal does not open if user is not logged in
+    addBlogModalEl.addEventListener("show.bs.modal", function (event) {
+        const isLoggedIn = localStorage.getItem("loggedIn") === "true";
+        if (!isLoggedIn) {
+            event.preventDefault(); // Prevent modal from opening
+        }
+    });
+});
+
+   </script>
+</body>
+</html>
+
+

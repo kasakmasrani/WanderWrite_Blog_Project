@@ -1,0 +1,138 @@
+/* Scope all styles to elements within the .container */
+.container.insights {
+    background-color: #f8f9fa; /* Light background for readability */
+    padding: 40px 15px; /* Extra padding for spaciousness */
+}
+
+/* Header and Paragraph Styling within the Insights Container */
+.container.insights h2 {
+    color: #2c3e50;
+    font-weight: bold;
+    font-size: 2.5rem; /* Adjusted for better hierarchy */
+    margin-bottom: 15px;
+}
+
+.container.insights p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6; /* Added line-height for better readability */
+}
+
+/* Row Styling for Sections inside Insights */
+.container.insights .row {
+    background-color: #ffffff;
+    border-radius: 12px; /* Slightly rounded corners */
+    margin-bottom: 40px; /* Added more space between sections */
+    padding: 20px; /* Padding for consistent spacing inside */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow effect */
+}
+
+/* Image Styling inside Insights */
+.container.insights .img-fluid {
+    border-radius: 12px; /* Consistent rounded corners with section */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensures images inside the container maintain their aspect ratio and cover the area */
+.container.insights .equal-image {
+    object-fit: cover;
+    height: 100%; /* Full container height */
+    width: 100%; /* Full container width */
+}
+
+/* Title Styling for Each Section inside Insights */
+.container.insights h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-transform: capitalize; /* Make section titles stand out */
+}
+
+/* Specific Section Title Colors */
+.container.insights h3:nth-child(1) {
+    color: #3498db; /* New Features */
+}
+
+.container.insights h3:nth-child(2) {
+    color: #e67e22; /* Upcoming Webinars */
+}
+
+.container.insights h3:nth-child(3) {
+    color: #27ae60; /* Community Spotlight */
+}
+
+/* General Paragraph Styling in Sections inside Insights */
+.container.insights p {
+    color: #333;
+    font-size: large;
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Flexbox Adjustment for Reverse Row (Upcoming Webinars) */
+.container.insights .flex-row-reverse {
+    flex-direction: row-reverse;
+}
+
+/* Enhanced Shadow Effect for each section inside Insights */
+.container.insights .shadow-lg {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Deeper shadow for more depth */
+}
+
+/* Margin and Padding Adjustments */
+.container.insights .mb-4 {
+    margin-bottom: 25px; /* More space between sections */
+}
+
+.container.insights .mb-3 {
+    margin-bottom: 20px; /* Added space before each section */
+}
+
+.container.insights .p-4 {
+    padding: 30px 40px; /* Adjusted padding to balance content */
+}
+
+/* Text Alignment */
+.container.insights .text-center {
+    text-align: center;
+}
+
+.container.insights .me-3 {
+    margin-right: 15px;
+}
+
+/* Media Queries to Ensure Responsiveness */
+@media (max-width: 768px) {
+    .container.insights {
+        padding: 30px 15px; /* Reduce padding on smaller screens */
+    }
+
+    .container.insights h2 {
+        font-size: 2rem; /* Make header smaller on mobile */
+    }
+
+    .container.insights h3 {
+        font-size: 1.6rem; /* Smaller section titles on mobile */
+    }
+
+    .container.insights .row {
+        margin-bottom: 20px; /* Less spacing between rows on mobile */
+    }
+
+    .container.insights .col-md-6 {
+        flex: 0 0 100%; /* Ensure columns take full width on small screens */
+    }
+
+    .container.insights .equal-image {
+        height: 250px; /* Adjust image height for smaller screens */
+    }
+}
+
+/* Adding subtle hover effects for interactivity */
+.container.insights .row:hover {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+}
+
+.container.insights .row .col-md-6:hover {
+    transform: translateY(-5px); /* Subtle lift effect on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+}

@@ -1,0 +1,89 @@
+/* /* Custom styles for Featured Articles */
+.featured-articles .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.featured-articles .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.featured-articles .card-header img {
+    height: 200px;
+    object-fit: cover;
+    transition: opacity 0.5s ease, filter 0.5s ease;
+    filter: blur(10px);
+}
+
+.featured-articles .card-header img.lazy-img {
+    opacity: 1;
+    filter: blur(0);
+}
+
+.featured-articles .card-body {
+    padding: 20px;
+}
+
+.featured-articles .tag {
+    background: #cccccc;
+    border-radius: 50px;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #fff;
+    padding: 2px 10px;
+    text-transform: uppercase;
+}
+
+.featured-articles .tag-teal {
+    background-color: #47bcd4;
+}
+
+.featured-articles .tag-purple {
+    background-color: #5e76bf;
+}
+
+.featured-articles .tag-pink {
+    background-color: #cd5b9f;
+}
+
+.featured-articles .card-text {
+    font-size: 14px;
+    color: #6c757d;
+}
+
+/* Button Styling */
+.featured-articles .btn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.featured-articles .btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .featured-articles .col-md-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .featured-articles .col-sm-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+/* Set images to a fixed height and ensure they maintain aspect ratio */
+.equal-image {
+    height: 300px;  /* Adjust as necessary */
+    object-fit: cover;
+    width: 100%;
+}

@@ -1,0 +1,277 @@
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
+/* Progress Bar */
+.progress-bar {
+    height: 4px;
+    background: #3498db;
+    width: 0%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Blog Post Content */
+.blog-post {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.blog-post .text-muted {
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+.blog-post img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+}
+
+.blog-post .lead {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #34495e;
+    margin-bottom: 1.5rem;
+}
+
+.blog-post p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.blog-post h2 {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.blog-post blockquote {
+    border-left: 4px solid #3498db;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+.blog-post blockquote footer {
+    font-size: 0.9rem;
+    color: #95a5a6;
+    margin-top: 0.5rem;
+}
+
+.blog-post ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.blog-post ul li {
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+/* Comments Section */
+.comments {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.comments h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+.comment {
+    margin-bottom: 1.5rem;
+}
+
+.comment img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.comment h5 {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+    color: #2c3e50;
+}
+
+.comment .text-muted {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+}
+
+.comment p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+.comment-form {
+    margin-top: 2rem;
+}
+
+.comment-form h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+.comment-form .form-control {
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.comment-form .btn-primary {
+    background-color: #3498db;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.comment-form .btn-primary:hover {
+    background-color: #2980b9;
+}
+
+/* Sidebar */
+.sidebar {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.sidebar .card-body {
+    padding: 1.5rem;
+}
+
+.sidebar .card-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.sidebar .card-text {
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.sidebar .btn-outline-dark {
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar .btn-outline-dark:hover {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+.sidebar .list-unstyled {
+    padding-left: 0;
+}
+
+.sidebar .list-unstyled li {
+    margin-bottom: 1rem;
+}
+
+.sidebar .list-unstyled a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.sidebar .list-unstyled a:hover {
+    color: #2980b9;
+}
+
+.sidebar .newsletter-form .form-control {
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.sidebar .newsletter-form .btn-primary {
+    background-color: #3498db;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar .newsletter-form .btn-primary:hover {
+    background-color: #2980b9;
+}
+.progress-bar {
+top: auto;
+bottom: 0;
+}
+a:hover {
+color: #2980b9;
+text-decoration: underline;
+}
+.btn:hover {
+transform: translateY(-2px);
+transition: transform 0.2s ease;
+}
+.social-sharing .btn-outline-dark:hover {
+    background-color: #333;
+    color: #fff;
+}
